@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+
 var HTMLWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
     template: __dirname + '/app/index.html',
@@ -13,6 +15,12 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
+            }, {
+                test: /\.css$/,
+                loader: 'style-loader!css-loader'
+            }, {
+                test: /\.(svg|ttf|woff|woff2|eot)$/,
+                loader: 'url-loader?limit=5000'
             }
         ]
     },
@@ -20,5 +28,8 @@ module.exports = {
         filename: 'transformed.js',
         path: __dirname + '/build'
     },
-    plugins: [HTMLWebpackPluginConfig]
+    plugins: [
+        HTMLWebpackPluginConfig,
+        new webpack.ProvidePlugin({$: 'jquery', jQuery: 'jquery'})
+    ]
 };

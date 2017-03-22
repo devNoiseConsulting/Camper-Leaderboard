@@ -1,3 +1,7 @@
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import './index.css';
+
 var React = require('react');
 var ReactDOM = require('react-dom');
 

@@ -1,0 +1,8 @@
+td img {
+  width: 40px;
+  max-height: 40px;
+  float: left;
+}
+.active > span:after {
+  content: ' *';
+}
