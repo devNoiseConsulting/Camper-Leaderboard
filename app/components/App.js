@@ -46,14 +46,18 @@ var App = React.createClass({
                         <th>#</th>
                         <th>Name</th>
                         <th>
-                            <a onClick={this.handleSort.bind(this, "recent")}
-                              className={this.state.column === "recent" ? 'active' : ''}
-                              ><span>Points in past 30 days</span></a>
+                            <a onClick={this.handleSort.bind(this, "recent")} className={this.state.column === "recent"
+                                ? 'active'
+                                : ''}>
+                                <span>Points in past 30 days</span>
+                            </a>
                         </th>
                         <th>
-                            <a onClick={this.handleSort.bind(this, "alltime")}
-                              className={this.state.column === "alltime" ? 'active' : ''}
-                              ><span>All time points</span></a>
+                            <a onClick={this.handleSort.bind(this, "alltime")} className={this.state.column === "alltime"
+                                ? 'active'
+                                : ''}>
+                                <span>All time points</span>
+                            </a>
                         </th>
                     </tr>
                 </thead>

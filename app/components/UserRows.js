@@ -6,7 +6,7 @@ var UserRows = React.createClass({
         return (
             <tbody>
                 {this.props.users.map(function(user, i) {
-                    return (<UserRow user={user} index={i} key={i.toString()} />);
+                    return (<UserRow user={user} index={i} key={i.toString()}/>);
                 })}
             </tbody>
         );
